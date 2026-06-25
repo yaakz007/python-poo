@@ -7,7 +7,7 @@ class Livro:
     Simula um livro, e simula a ação de passar as páginas dele.
     """
     def __init__(self, title = "", pag = 0):
-        # Atributos de classe
+        # Atributos de instância
         self.title = title
         self.pag = pag
         self.pag_atual = 1 # Começa na página 1

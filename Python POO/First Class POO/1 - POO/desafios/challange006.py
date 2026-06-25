@@ -6,9 +6,10 @@ class Caneta:
     Simula o funcionamento de uma caneta podendo escolher a cor, destampar e tampar a caneta.
     """
     def __init__(self, cor = "blue"):
-        # Atributos de classe
+        # Atributos de instância
         self.cor = cor
         self.situation = 1
+
     # Métodos de classe
     def __str__(self):
         return f"A caneta na cor {self.cor} foi criada com sucesso!"

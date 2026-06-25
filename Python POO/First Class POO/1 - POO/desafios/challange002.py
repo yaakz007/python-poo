@@ -7,7 +7,7 @@ class Label:
     Register a product and create a label for it
     """
     def __init__(self, name = "", price = 0):
-        # Atributos de clase
+        # Atributos de instância
         self.name = name
         self.price = price
         print("[bold light green]Cadastro de produto realizado com sucesso!")

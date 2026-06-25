@@ -7,7 +7,7 @@ class Gamer:
     Cria uma ficha de um gamer com seu nome, nick e jogos favoritos;
     """
     def __init__(self, nome = "", nick = "", *jogos):
-        # Atributos de classe
+        # Atributos de instância
         self.nome = nome
         self.nick = nick 
         self.jogos = jogos

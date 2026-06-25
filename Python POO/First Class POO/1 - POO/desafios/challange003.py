@@ -8,7 +8,7 @@ class Churrasco:
     Cria uma média de gastos em um churrasco de acordo com a quantidade de convidados;
     """
     def __init__(self, title = "", quant = 0):
-        # Atributos de classe
+        # Atributos de instância
         self.title = title
         self.quant = quant
     

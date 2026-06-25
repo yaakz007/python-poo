@@ -15,8 +15,9 @@ class RemoteControl:
     canal_max:int = 6
     vol_min:int = 1
     vol_max:int = 5
-
+    
     def __init__(self, canal=1, volume=2):
+        # Atributos de instância
         self.canal_atual:int = canal
         self.vol_atual:int = volume
         self.estado:bool = False
@@ -73,7 +74,7 @@ class RemoteControl:
 c = RemoteControl()
 while True:
     c.show_tv()
-    command = str(input(" < CH >   - VOL + "))
+    command = str(input(f" < CH{c.canal_atual} >   - VOL{c.vol_atual} + "))
     match command:
         case "0":
             break
