@@ -6,8 +6,11 @@ class Worker:
     """
     Cria o perfil de cadastro de um funcionário e pode gerar uma apresentação formal.
     """
+    # Atributos de classe
+    empresa = "WEG"
+
     def __init__(self, nome = "", setor = "", cargo = ""):
-        # Atributos de classe
+        # Atributos de Instância
         self.nome = nome
         self.setor = setor
         self.cargo = cargo
@@ -15,7 +18,7 @@ class Worker:
 
     # Métodos da classe
     def presentation(self):
-        return (f"O funcionário {self.nome} trabalha no cargo de {self.cargo} no setor {self.setor}.")
+        return (f"O funcionário [bold blue]{self.nome}[/] trabalha no cargo de [green]{self.cargo}[/] no setor [yellow]{self.setor}[/] da empresa {Worker.empresa}")
 
 # Objetos de teste da classe
 f1 = Worker("Lucas", "TI", "Programador")
