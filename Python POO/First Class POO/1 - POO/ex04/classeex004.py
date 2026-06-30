@@ -1,6 +1,7 @@
 from rich import print, inspect
 
-# Aula de herança
+# Heranças
+
 
 
 class Pessoa:
@@ -48,7 +49,3 @@ class Funcionario(Pessoa):
     # Métodos da classe
     def bater_ponto(self):
         print(f"{self.nome} bateu o ponto.")
-
-a1 = Aluno("Lucas", 18, "Engenharia de Software", "T01")
-a1.aniversario()
-inspect(a1, methods=True)
