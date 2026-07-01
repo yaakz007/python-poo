@@ -11,6 +11,3 @@ class Professor(Pessoa):
     # Métodos da classe
     def dar_aula(self):
         print(f"O professor {self.nome} começou a dar aula.")
-
-    def estudar(self):
-        pass

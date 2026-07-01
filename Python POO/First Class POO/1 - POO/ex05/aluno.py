@@ -10,6 +10,3 @@ class Aluno(Pessoa):
     # Métodos da classe
     def matricula(self):
         print(f"{self.nome} acabou de se matricular.")
-
-    def estudar(self):
-        pass

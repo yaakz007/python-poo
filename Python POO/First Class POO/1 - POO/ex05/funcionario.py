@@ -10,6 +10,3 @@ class Funcionario(Pessoa):
     # Métodos da classe
     def bater_ponto(self):
         print(f"{self.nome} bateu o ponto.")
-
-    def estudar(self):
-        pass
