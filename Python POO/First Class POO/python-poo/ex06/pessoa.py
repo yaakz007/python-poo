@@ -1,4 +1,4 @@
-from abc import ABC, abstractclassmethod
+from abc import ABC, abstractmethod
 
 class Pessoa(ABC):
 
@@ -11,6 +11,6 @@ class Pessoa(ABC):
     def aniversario(self):
         self.idade += 1
     
-    @abstractclassmethod
+    @abstractmethod
     def estudar(self):
         pass
