@@ -2,102 +2,141 @@
 
 !Python !Rich !Status
 
-A collection of exercises and challenges focused on Object-Oriented Programming (OOP) in Python, organized by increasing complexity — from basic classes to inheritance, abstract classes, polymorphism, and encapsulation.
+A collection of Python exercises and challenges focused on Object-Oriented Programming (OOP), progressing from basic classes to inheritance, abstraction, polymorphism, and encapsulation.
 
-Why This Repository Exists
+📌 About This Repository
 
-Learning OOP through theory alone isn't enough. Here, each concept is turned into working code: a small problem (a remote control, a shipping cost calculator, a payroll system) solved using classes, with the results displayed in the terminal using the Rich library.
+Learning OOP through theory alone isn't enough. This repository turns concepts into working code through small, practical projects, including:
 
-The goal isn't just to "make it work," but to practice good code organization: each class has a clear responsibility and is kept separate from the code responsible for displaying the interface.
+A TV remote control.
+A shipping cost calculator.
+A payroll system.
+Exercises involving inheritance and abstract classes.
 
-Concepts Covered
-Concept	Where to Find It
-Classes, objects, and constructors (__init__)	ex01, ex02, desafios/challange001 to 006
-Special methods (__str__)	ex02, desafios/challange003, 004
-Class vs. instance attributes	desafios/challange001, desafios/10, ex07
+The output is displayed in the terminal using Rich.
+
+The main goal is to practice not only how to make code work, but also how to organize it properly, giving each class a clear responsibility and keeping business logic separate from the user interface.
+
+📚 Concepts Covered
+Concept	Examples
+Classes, objects, and constructors (__init__)	ex01, ex02, desafios/challange001–006
+Special methods (__str__)	ex02, desafios/challange003–004
+Class and instance attributes	desafios/challange001, desafios/10, ex07
 Inheritance and super()	ex04, ex05, ex06
-Abstract classes (ABC, @abstractmethod)	ex06, ex07, desafios/challange008, 009, 10
-Polymorphism	desafios/challange008, 009, 10, ex07
-Encapsulation (_attribute, @property, getters, and setters)	desafios/challange007
-Highlights
-Remote Control (desafios/challange007.py): Channel and volume are protected, with getters and setters that validate their allowed ranges. The TV's state can only be changed through the power() method, keeping the interface logic outside the class.
-Shipping Cost Calculator (desafios/10): An abstract Transporte class with Moto, Caminhao, and Drone subclasses, each implementing calc_frete() according to its own distance rules — demonstrating polymorphism.
-Payroll System (ex07): An abstract Funcionario class with FuncionarioHorista and FuncionarioMensalista subclasses, each calculating salaries according to its own rules.
-Technologies
-Layer	Technology
-Programming language	Python 3.12+
-Terminal interface	Rich (panels and tables)
-Standard library	abc, math, os
-Project Structure
+Abstract classes (ABC, @abstractmethod)	ex06, ex07, desafios/challange008–010
+Polymorphism	desafios/challange008–010, ex07
+Encapsulation (@property, getters, and setters)	desafios/challange007
+✨ Highlights
+🎮 Remote Control
+
+Location: desafios/challange007.py
+
+Encapsulated channel and volume attributes.
+Getters and setters with input validation.
+TV state controlled through the power() method.
+User interface logic separated from the class.
+🚚 Shipping Cost Calculator
+
+Location: desafios/10
+
+Abstract base class: Transporte.
+Subclasses: Moto, Caminhao, and Drone.
+Each subclass implements calc_frete() according to its own distance rules.
+Demonstrates polymorphism and abstraction.
+💰 Payroll System
+
+Location: ex07
+
+Abstract base class: Funcionario.
+Subclasses: FuncionarioHorista and FuncionarioMensalista.
+Each subclass implements its own salary calculation.
+🛠️ Technologies
+Technology	Purpose
+Python 3.12+	Programming language
+Rich	Terminal panels and tables
+abc	Abstract base classes
+math	Mathematical operations
+os	Operating system utilities
+📂 Project Structure
 python-poo/
-├── ex01/              # First class, attributes, and methods
-├── ex02/              # Constructor, __str__, __dict__
-├── ex03/              # BankAccount
-├── ex04/              # Inheritance (Person, Student, Teacher, Employee)
-├── ex05/              # Inheritance, one class per file
-├── ex06/              # Abstract Person class
-├── ex07/              # Abstract Employee (Hourly and Salaried)
+├── ex01/                   # Classes, attributes, and methods
+├── ex02/                   # Constructors, __str__, and __dict__
+├── ex03/                   # Bank account
+├── ex04/                   # Inheritance
+├── ex05/                   # Inheritance, one class per file
+├── ex06/                   # Abstract Person class
+├── ex07/                   # Payroll system
 ├── desafios/
-│   ├── challange001 to 006  # Registration, label, barbecue, book, gamer, pen
-│   ├── challange007.py     # Remote control (encapsulation)
-│   ├── challange008.py     # Polygons (area and perimeter)
+│   ├── challange001–006/   # Basic OOP exercises
+│   ├── challange007.py     # Remote control and encapsulation
+│   ├── challange008.py     # Polygons: area and perimeter
 │   ├── challange009.py     # Hot beverages
 │   ├── 10/                 # Shipping cost calculator
-│   └── 11/                 # In progress
-└── rich/              # Experiments with the Rich library
+│   └── 11/                 # Work in progress
+└── rich/                   # Rich library experiments
 
-How to Run
-
-Clone the repository and install the required dependency:
-
+🚀 Getting Started
+1. Clone the repository
 git clone https://github.com/yaakz007/python-poo.git
 cd python-poo
+
+2. Install the dependency
 pip install rich
 
+3. Run an exercise
 
-Directories containing __main__.py can be executed using their directory paths:
+Directories containing __main__.py can be executed directly:
 
 python ex07
 python desafios/10
 
 
-Standalone Python files can be executed directly:
+Standalone Python files can be executed individually:
 
 python desafios/challange007.py
 python desafios/challange008.py
 
+Remote Control Commands
 
-The remote control exercise (challange007.py) uses the following keyboard commands:
+When running challange007.py, use the following keyboard commands:
 
-@ — Turn the TV on or off.
-+ / - — Increase or decrease the volume.
-< / > — Change the channel.
-# — Select a specific channel.
-0 — Exit the program.
-Example Output
+Key	Action
+@	Turn the TV on or off
++ / -	Increase or decrease the volume
+< / >	Change the channel
+#	Select a channel
+0	Exit the program
+📸 Example Output
+Shipping Cost Calculator
 
-Running python desafios/10 (shipping costs for a distance of 30 km):
+Command: python desafios/10
+
+Example for a distance of 30 km:
 
 ┏━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
 ┃ Distance  ┃ Type     ┃ Shipping Cost       ┃
 ┡━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
 │ 30km      │ Moto     │ R$15.00             │
 │ 30km      │ Caminhao │ Minimum range: 50km │
-│ 30km      │ Drone    │ Maximum range: 10km  │
+│ 30km      │ Drone    │ Maximum range: 10km │
 └───────────┴──────────┴─────────────────────┘
 
+Payroll System
 
-Running python ex07 (net salary after INSS social security contributions):
+Command: python ex07
 
 ╭─────────────────── Salary Analysis ──────────────────────╮
 │ Lucas Gabriel's salary is R$6891.25, equivalent to 4.3  │
 │ minimum wages.                                            │
-╰──────────────────────────────────────────────────────────╯
+╰───────────────────────────────────────────────────────────╯
 
-Future Improvements
-Encapsulate ContaBancaria: The account balance is currently public. The next step is to protect it using _saldo, @property, and validation in the saque and deposito methods, following the approach used in the remote control exercise.
-Encapsulate Funcionario: salario_bruto and salario are still public, and salario is only available after calling calc_sal().
-Improve ex06: Replace abstractclassmethod with abstractmethod and properly implement the estudar() method.
-Complete desafios/11: Finish the exercise, as the file is still incomplete.
-Add tests: Use pytest to test shipping cost calculations, salary rules, and remote control limits.
-Standardize naming: Rename files containing challange to use the correct spelling, challenge, and document each challenge with a short problem statement.
+🗺️ Roadmap
+Encapsulate the bank account balance using _saldo, @property, and validation for withdrawals and deposits.
+Improve encapsulation in Funcionario, including salario_bruto and salario.
+Replace abstractclassmethod with abstractmethod in ex06 and implement estudar().
+Complete the exercise in desafios/11.
+Add automated tests with pytest for shipping costs, salary calculations, and remote control limits.
+Rename files containing the misspelling challange to challenge.
+Add a short problem description to each challenge.
+
+This repository is part of my journey to improve my Python skills and build a solid understanding of Object-Oriented Programming.
