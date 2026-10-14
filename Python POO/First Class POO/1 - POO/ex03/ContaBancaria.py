@@ -1,4 +1,4 @@
-class Banco:
+class ContaBancaria:
     """
 Cria uma conta bancária e permite fazer saques e depósitos.
     """
@@ -22,7 +22,7 @@ Cria uma conta bancária e permite fazer saques e depósitos.
     def deposito(self, valor):
         self.saldo += valor
     
-eu = Banco(112, "Lucas", 7346)
+eu = ContaBancaria(112, "Lucas", 7346)
 eu.saque(3075)
 eu.deposito(54)
 print(eu)
